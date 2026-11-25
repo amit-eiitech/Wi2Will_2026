@@ -1,17 +1,17 @@
 <header id="site-header" class="site-header py-4 md:py-5" x-data="{ open: false }" @keydown.escape.window="open = false" @resize.window="if (window.innerWidth >= 1024) open = false">
     <div class="mx-auto px-6 md:px-12 flex items-center justify-between">
         <!-- Brand Logo -->
-        <a href="#top" @click="open = false" class="relative z-50 transition-transform duration-200 hover:opacity-85" aria-label="wi2 will トップへ">
+        <a href="{{ route('home') }}" @click="open = false" class="relative z-50 transition-transform duration-200 hover:opacity-85" aria-label="wi2 will トップへ">
             <img class="h-12 md:h-16 w-auto object-contain" src="{{ asset('images/brand.png') }}" alt="株式会社wi2 will" />
         </a>
 
         <!-- Desktop Navigation (lg and above) -->
         <nav aria-label="メインナビゲーション" class="hidden lg:flex items-center gap-3">
             <ul class="nav-pill-container m-0">
-                <li><a href="#business" class="nav-pill-btn">理念</a></li>
-                <li><a href="#business" class="nav-pill-btn">事業内容</a></li>
-                <li><a href="#about" class="nav-pill-btn">会社概要</a></li>
-                <li><a href="#recruit" class="nav-pill-btn">採用情報</a></li>
+                <li><a href="{{ route('philosophy') }}" class="nav-pill-btn">理念</a></li>
+                <li><a href="{{ route('business') }}" class="nav-pill-btn">事業内容</a></li>
+                <li><a href="{{ route('company-profile') }}" class="nav-pill-btn">会社概要</a></li>
+                <li><a href="{{ route('recruit') }}" class="nav-pill-btn">採用情報</a></li>
                 <li>
                     <a href="#english" class="nav-pill-btn">
                         <x-lucide-globe class="size-3.5 mt-0.5 text-gray-500" />
@@ -20,7 +20,7 @@
                 </li>
             </ul>
 
-            <a href="#contact" class="nav-pill-btn-cta">お問い合わせ</a>
+            <a href="{{ route('contact') }}" class="nav-pill-btn-cta">お問い合わせ</a>
         </nav>
 
         <!-- Mobile Menu Trigger Button (below lg) -->

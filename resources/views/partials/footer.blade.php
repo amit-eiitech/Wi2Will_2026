@@ -7,7 +7,22 @@
             <img class="h-16" src="{{ asset('images/brand.png') }}" alt="">
             <div class="mt-4 ms-4">
                 <span class="block text-lg font-semibold mb-2.5">株式会社ウィズウィル</span>
-                <p class="tracking-wider">〒550-0005<br>大阪市西区西本町3-1-43<br>西本町ソーラービル701B号<br>06-4256-5245</p>
+
+                <p class="text-gray-600 text-[14px] tracking-wider leading-relaxed">
+                    〒550-0005<br>大阪市西区西本町3-1-43<br>西本町ソーラービル701B号<br>06-4256-5245
+                </p>
+
+                <div class="flex items-center gap-4 mt-6">
+                    <a href="https://facebook.com" class="size-9 rounded-full" target="_blank">
+                        <img src="{{ asset('images/svgs/facebook.svg') }}" alt="">
+                    </a>
+                    <a href="https://x.com" class="size-9 bg-black p-2 rounded-full" target="_blank">
+                        <img src="{{ asset('images/svgs/x_dark.svg') }}" alt="">
+                    </a>
+                    <a href="https://linkedin.com" class="size-9 bg-white rounded-full overflow-hidden" target="_blank">
+                        <img src="{{ asset('images/svgs/linkedin.svg') }}" alt="">
+                    </a>
+                </div>
             </div>
         </div>
 

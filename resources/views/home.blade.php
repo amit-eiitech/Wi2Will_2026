@@ -82,7 +82,7 @@
 
             <!-- MARQUEES -->
             <div class="w-full">
-                <div class="business-rows flex flex-col gap-24 max-w-[75vw] ms-auto">
+                <div class="business-rows flex flex-col gap-40 max-w-[75vw] ms-auto">
                     <!-- 01 MOBILE -->
                     <div class="business-row" data-direction="left" data-speed="300">
                         <div class="business-marquee">
@@ -195,6 +195,7 @@
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="bg-[#e85d04] relative py-32 px-12 w-full">
         <div class="w-full max-w-7xl mx-auto">
             <div class="relative flex">
@@ -214,6 +215,26 @@
                         <span class="text-white text-6xl font-bold transition-all duration-300 group-hover:tracking-wider">FOR JOB SEEKERS</span>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="relative py-32 px-12 w-full">
+        <div class="w-full max-w-7xl mx-auto flex">
+            <div class="w-2/5 px-12">
+                <div class="eyebrow">Notice</div>
+                <h2 class="letter-reveal relative z-10 text-6xl font-bold font-display leading-none tracking-widest mb-12">お知らせ</h2>
+            </div>
+
+            <div class="w-3/5">
+                @for ($i = 0; $i < 4; $i++)
+                    <a href="#" class="flex items-center border-b border-gray-200 py-6 transition-colors duration-300 hover:bg-gray-100 group">
+                        <span class="w-36 text-sm px-3">2026.11.25</span>
+                        <span class="grow">新しいウェブサイトを公開しました</span>
+                        <span class="px-3"><x-lucide-chevrons-right class="size-5 text-gray-400 transition-all duration-300 group-hover:text-brand-orange group-hover:translate-x-0.5" /></span>
+                    </a>
+                @endfor
             </div>
         </div>
     </section>

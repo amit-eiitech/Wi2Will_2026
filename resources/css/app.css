@@ -205,12 +205,12 @@ body {
 }
 
 .business-images {
-    @apply flex gap-2.5 w-max;
+    @apply flex w-max;
     flex: 0 0 auto;
 }
 
 .business-images img {
-    @apply block w-95 object-cover max-w-none rounded-lg;
+    @apply block w-95 object-cover max-w-none rounded-lg mr-2.5;
     flex: 0 0 auto;
     height: var(--business-image-height);
 }
