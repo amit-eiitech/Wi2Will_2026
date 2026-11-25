@@ -1,9 +1,16 @@
 <?php
 
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    $latestNews =  News::published()
+        ->orderByDesc('published_at')
+        ->orderByDesc('id')
+        ->limit(5)
+        ->get();
+
+    return view('home', compact('latestNews'));
 })->name('home');
 
 Route::get('/philosophy', function () {
@@ -25,3 +32,8 @@ Route::get('/recruit', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/news/{slug}', function (string $slug) {
+    $news = News::where('slug', $slug)->firstOrFail();
+    return view('news.show', compact('news'));
+})->name('news.show');

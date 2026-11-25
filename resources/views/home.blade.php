@@ -228,13 +228,13 @@
             </div>
 
             <div class="w-3/5">
-                @for ($i = 0; $i < 4; $i++)
-                    <a href="#" class="flex items-center border-b border-gray-200 py-6 transition-colors duration-300 hover:bg-gray-100 group">
-                        <span class="w-36 text-sm px-3">2026.11.25</span>
-                        <span class="grow">新しいウェブサイトを公開しました</span>
+                @forelse ($latestNews as $news)
+                    <a href="{{ route('news.show', $news->slug) }}" class="flex items-center border-b border-gray-200 py-6 transition-colors duration-300 hover:bg-gray-100 group">
+                        <span class="w-30 text-sm px-3">{{ $news->published_at->format('Y-m-d') }}</span>
+                        <span class="grow">{{ $news->title }}</span>
                         <span class="px-3"><x-lucide-chevrons-right class="size-5 text-gray-400 transition-all duration-300 group-hover:text-brand-orange group-hover:translate-x-0.5" /></span>
                     </a>
-                @endfor
+                @endforeach
             </div>
         </div>
     </section>
